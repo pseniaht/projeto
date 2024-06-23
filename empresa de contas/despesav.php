@@ -1,4 +1,13 @@
 <?php
+session_start();
+
+if (!empty($_SESSION['id_usuario'])) {
+    // O login foi feito, permanece na página
+} else {
+    // Redireciona para a página de login se não estiver logado
+    header("Location: index.php");
+    exit();
+}
 include_once ('controller/controller_conta.php');
 controller_conta::Apagar_Pagar_conta();
 $contas = controller_conta::Get_contas("despesa_variavel");
@@ -12,7 +21,11 @@ $contas = controller_conta::Get_contas("despesa_variavel");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rota Financeira</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="css/padrao.css">
+    <link rel="stylesheet" href="css/extrato.css">
+    <link rel="stylesheet" href="css/registro.css">
     <script>
         function limpa_formulário_cep() {
             document.getElementById('rua').value = ("");
@@ -70,7 +83,12 @@ $contas = controller_conta::Get_contas("despesa_variavel");
 
 <body>
     <header>
-        <img src="ROTA financeira.png" alt="">
+        <img src="ROTA financeira.png" alt="" id="logo">
+        <form action="index.php" method="post" class="sair">
+            <button type="submit">
+                <i class="material-icons">&#xe879;</i>
+            </button>
+        </form>
     </header>
 
     <?php include_once('includes/extrato.php'); ?>

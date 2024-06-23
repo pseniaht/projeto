@@ -1,0 +1,80 @@
+/* PARTE SUPERIOR DO SISTEMA - SALDO E A RECEBER */
+.segura_saldo_receber {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+}
+
+.background_saldo_receber {
+    width: 39%;
+    margin: auto;
+    background-color: #fff;
+    padding: 10px 5px 10px 5px;
+    display: flex;
+    color: #000;
+    justify-content: space-between;
+    border-radius: 12px;
+    box-shadow: 0px 0px 1px #000;
+}
+
+/* AGRUPA TÍTULO E VALOR */
+.agrupa_titulo_valor {
+    display: flex;
+    flex-direction: column;
+    padding: 17px 13px;
+    border-radius: 6px;
+    width: 30%;
+}
+
+/* TÍTULO VALORES */
+.titulo_valores {
+    margin-left: 6px;
+    transform: translateY(-4px);
+    letter-spacing: 1px;
+    color: #727272;
+    font-weight: 550;
+    font-size: 12px;
+}
+
+#last_titulo_valores{
+    text-align: end;
+}
+
+.valor {
+    padding: 5px;
+    font-size: 18px;
+    transform: translateX(3px);
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+#valor_saldo{
+    width: 70%;
+    color: #269C72;
+}
+
+#valor_saldo:hover {
+    background-color: #269C72;
+    color: #fff;
+}
+
+#valor_receber{
+    width: 70%;
+    color: #727272;
+}
+
+#valor_receber:hover {
+    background-color: #727272;
+    color: #fff;
+}
+
+#valor_despesa{
+    margin-left: 30%;
+    color: #A23E3E;
+    text-align: end;
+}
+
+#valor_despesa:hover {
+    background-color: #A23E3E;
+    color: #fff;
+}

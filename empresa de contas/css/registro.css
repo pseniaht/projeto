@@ -1,0 +1,226 @@
+/* SEGURA REGISTROS */
+.segura_tabela {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+}
+
+
+/* EXPOSIÇÃO REGISTROS DO BANCO DE DADOS */
+.registros {
+    width: 90%;
+    background-color: #fff;
+    margin: auto;
+    padding-bottom: 15px;
+    box-shadow: 0px 0px 1px #000;
+    border-radius: 6px;
+}
+
+/* NAVEGAÇÃO ENTRE PÁGINAS*/
+.navegacao {
+    width: 100%;
+    background-color: #269C72;
+    border-radius: 6px 6px 0px 0px;
+    margin-bottom: 10px;
+    border: 1px 1px 0px 1px solid;
+}
+
+/* alinha 'botoes' */
+.tipo {
+    display: flex;
+    width: 90%;
+}
+
+/* NAVEGAÇÃO */
+.nome_da_pagina {
+    padding: 10px;
+    width: 17.5%;
+    font-size: 17px;
+    text-align: center;
+    letter-spacing: 0.8px;
+}
+
+#pag-ativa.nome_da_pagina{
+    background-color: #fff;
+    border-radius: 6px 0px 0px 0px;
+    color: #269C72;
+}
+
+#pag-ativa2.nome_da_pagina{
+    background-color: #fff;
+    color: #269C72;
+}
+
+#pag-ativa3.nome_da_pagina{
+    background-color: #fff;
+    color: #269C72;
+}
+
+#pag-ativa4.nome_da_pagina{
+    background-color: #fff;
+    color: #269C72;
+}
+
+input[name="pagina"]{
+    font-size: 17px;
+    color: #fff;
+    background: none;
+}
+
+input[id="pag-ativa"]{
+    font-size: 17px;
+    color: #269C72;
+}
+
+input[id="pag-ativa2"]{
+    font-size: 17px;
+    color: #269C72;
+}
+
+input[id="pag-ativa3"]{
+    font-size: 17px;
+    color: #269C72;
+}
+
+input[id="pag-ativa4"]{
+    font-size: 17px;
+    color: #269C72;
+}
+
+/* SEGURA A EXIBIÇÃO DOS REGISTROS */
+#tabela {
+    width: 97%;
+    min-height: 0px;
+    overflow: hidden;
+    background-color: #269C72;
+    color: #fff;
+    margin: auto;
+    border-radius: 6px 6px 0px 0px;
+    transform: translateY(5px);
+}
+
+
+.fora4 {
+    padding: 0px;
+    width: 97%;
+    min-height: 200px;
+    max-height: 300px;
+    overflow: scroll;
+    background-color: #d8d7d7;
+    margin: auto;
+    border-radius: 6px;
+}
+
+@media(max-width:1300px) {
+    #tabela {
+        visibility: hidden;
+    }
+    .fora4{
+        max-height: 190px;
+        overflow: scroll;
+    }
+    .registros{
+        padding-bottom: 0px;
+        overflow-y: hidden;
+        max-height: 290px;
+    }
+}
+
+@media(max-width:1090px) {
+    .fora4 {
+        overflow-x: scroll;
+    }
+
+    #tabela {
+        visibility: hidden;
+    }
+
+    .nome {
+        letter-spacing: 0px;
+        font-size: 13px;
+    }
+}
+
+/*margin pra registros*/
+.marg {
+    margin-bottom: 10.5px;
+    display: flex;
+    width: 100%;
+}
+
+
+/* alinhar registro com input de exclusão */
+.fora5 {
+    display: flex;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #fff;
+    margin: auto;
+    margin-left: 7px;
+    margin-right: 7px;
+    justify-content: space-between;
+}
+
+/* exposição da tupla */
+.expor {
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    width: 98%;
+    max-height: 40px;
+    min-width: 1604px;
+}
+
+.expor2 {
+    padding: 10px;
+    margin: auto;
+    align-items: center;
+    display: flex;
+    width: 95%;
+    max-height: 40px;
+    padding-right: 0px;
+    min-width: 1604px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+#cabecalho {
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    background-color: #269C72;
+    font-size: 15px;
+    position: sticky; 
+    top: 0;
+    z-index: 1000; /* Ajuste conforme necessário */
+    color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Adicione uma sombra para destacar o cabeçalho */
+}
+
+
+.inforeg {
+    width: 12%;
+    margin: auto;
+    text-align: center;
+}
+
+.inforeg2 {
+    width: 12%;
+    margin: auto;
+    text-align: center;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.sobre-cabecalho {
+    visibility: hidden;
+    height: 10px;
+}
+
+@media(max-width:1190px) {
+    .expor {
+        font-size: 15px;
+    }
+}

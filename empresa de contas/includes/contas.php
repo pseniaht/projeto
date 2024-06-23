@@ -1,5 +1,21 @@
 <div class="fora4">
 
+    <div class="expor" id="cabecalho">
+        <div class="inforeg">Nome</div>
+        <div class="inforeg">CPF/CNPJ</div>
+        <div class="inforeg">Vencimento</div>
+        <div class="inforeg">Recebimento</div>
+        <div class="inforeg">Valor</div>
+        <div class="inforeg">Forma de pagamento</div>
+        <div class="inforeg">Status</div>
+        <div class="inforeg">
+            <div class="hidden">1</div>
+        </div>
+        <div class="inforeg">
+            <div class="hidden">1</div>
+        </div>
+    </div>
+    <div class="sobre-cabecalho"></div>
     <?php
 
     foreach ($contas as $con):

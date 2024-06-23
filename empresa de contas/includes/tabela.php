@@ -25,26 +25,6 @@
             </form>
         </div>
 
-        <div class="fora4" id="tabela">
-            <div class="marg">
-                <div class="expor" id="cabecalho">
-                    <div class="inforeg">Nome</div>
-                    <div class="inforeg">CPF/CNPJ</div>
-                    <div class="inforeg">Vencimento</div>
-                    <div class="inforeg">Recebimento</div>
-                    <div class="inforeg">Valor</div>
-                    <div class="inforeg">Forma de pagamento</div>
-                    <div class="inforeg">Status</div>
-                    <div class="inforeg">
-                        <div class="hidden">1</div>
-                    </div>
-                    <div class="inforeg">
-                        <div class="hidden">1</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <?php include_once('includes/contas.php'); ?>
     </div>
 </div>

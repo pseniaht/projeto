@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ebebeb;
+}
+
+/* HEADER DO SISTEMA */
+header {
+    background-color: #269C72;
+    height: 40px;
+    padding: 2px 8px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+#logo {
+    height: 100%;
+}
+
+.sair {
+    display: flex;
+}
+
+button{
+    background: none;
+}
+
+.sair .material-icons {
+    font-size: 25px;
+    color: #fff;
+    margin-right: 10px;
+}

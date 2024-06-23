@@ -1,0 +1,134 @@
+.fora7 {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.cadastro {
+    background-color: #fff;
+    width: 40%;
+    margin: auto;
+    box-shadow: 0px 0px 1px #000;
+    border-radius: 6px;
+    padding-bottom: 10px;
+}
+
+.cadastro:nth-child(2){
+    margin-top: 0px;
+}
+
+.cad {
+    background-color: #269C72;
+    padding: 10px;
+    text-align: center;
+    border-radius: 6px 6px 0px 0px;
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.formcadastro {
+    width: 85%;
+    margin: auto;
+    padding: 5px;
+    border-radius: 6px;
+    background-color: #D9D9D9;
+}
+
+.formc {
+    padding: 10px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #269C72 ;
+
+}
+
+.formc input {
+    border: 0.1px solid #269C72;
+    border-radius: 6px;
+    padding: 3px;
+    font-family: Arial, sans-serif;
+    width: 100%;
+}
+
+.inputcadastro {
+    width: 50%;
+}
+
+
+select[id="sel"] {
+    border: 0.1px solid #269C72;
+    border-radius: 6px;
+    padding: 3px;
+    font-family: Arial, sans-serif;
+    width: 103%;
+}
+
+input[type="email"]:focus,
+select[id="sel"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="text"]:focus {
+    outline: none;
+    color: #269C72;
+    box-shadow: 0px 1px 2px #269C72;
+}
+
+.info {
+    width: 40%;
+    color: #000;
+}
+
+.centcadastro {
+    width: 95%;
+    margin: auto;
+}
+
+
+.pagar{
+    padding: 2px 4px;
+    color: #000;
+    background-color: #D9D9D9;
+    border-radius: 2px;
+}
+
+#pago:hover{
+    background-color: #3ab840a9;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.3s;
+}
+
+#excluir:hover{
+    background-color: #aa0101a2;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.final {
+    font-size: 15px;
+    width: 100%;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #fff;
+    border-color: #269C72;
+    box-shadow: 0.5px 0.5px 3px #7c7c7c;
+    letter-spacing: 0.5px;
+}
+
+.marge{
+    width: 25%;
+    margin: auto;
+}
+
+.final:hover {
+    background-color: #269C72;
+    color: #fff;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: 0.5px 0.5px 3px #269C72;
+}

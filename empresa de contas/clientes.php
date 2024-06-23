@@ -1,4 +1,13 @@
 <?php
+session_start();
+
+if (!empty($_SESSION['id_usuario'])) {
+    // O login foi feito, permanece na página
+} else {
+    // Redireciona para a página de login se não estiver logado
+    header("Location: index.php");
+    exit();
+}
 include_once ('controller/controller_cliente.php');
 $controller = new Controller_cliente();
 $controller->Excluir_Cliente();
@@ -12,7 +21,11 @@ $controller->Excluir_Cliente();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rota Financeira</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="css/padrao.css">
+    <link rel="stylesheet" href="css/extrato.css">
+    <link rel="stylesheet" href="css/registro.css">
     <script>
         function limpa_formulário_cep() {
             document.getElementById('rua').value = ("");
@@ -72,7 +85,12 @@ $controller->Excluir_Cliente();
 
 <body>
     <header>
-        <img src="ROTA financeira.png" alt="">
+        <img src="ROTA financeira.png" alt="" id="logo">
+        <form action="index.php" method="post" class="sair">
+            <button type="submit">
+                <i class="material-icons">&#xe879;</i>
+            </button>
+        </form>
     </header>
 
     <?php include_once('includes/extrato.php'); ?>
@@ -104,48 +122,41 @@ $controller->Excluir_Cliente();
                 </form>
             </div>
 
-            <div class="fora4" id="tabela">
-                <div class="marg">
-                    <div class="expor" id="cabecalho">
-                        <div class="inforeg">Nome</div>
-                        <div class="inforeg">CPF/CNPJ</div>
-                        <div class="inforeg">Cidade</div>
-                        <div class="inforeg">Telefone</div>
-                        <div class="inforeg">Banco</div>
-                        <div class="inforeg">Conta</div>
-                        <div class="inforeg">
-                            <div class="hidden">1</div>
-                        </div>
+            <div class="fora4">
+                <div class="expor" id="cabecalho">
+                    <div class="inforeg">Nome</div>
+                    <div class="inforeg">CPF/CNPJ</div>
+                    <div class="inforeg">Cidade</div>
+                    <div class="inforeg">Telefone</div>
+                    <div class="inforeg">Conta</div>
+                    <div class="inforeg">
+                        <div class="hidden">1</div>
                     </div>
                 </div>
-            </div>
-
-            <div class="fora4">
+                <div class="sobre-cabecalho"></div>
                 <?php
                 $clientes = $controller->Get_Clientes();
                 foreach ($clientes as $cli):
                     ?>
                     <div class='marg'>
                         <div class='fora5'>
-                                <div class='inforeg3'>
+                            <div class='expor2'>
+                                <div class='inforeg2'>
                                     <?php echo $cli->getNome(); ?>
                                 </div>
-                                <div class='inforeg3'>
+                                <div class='inforeg2'>
                                     <?php echo $cli->getCpfCnpj(); ?>
                                 </div> 
-                                <div class='inforeg3'>
+                                <div class='inforeg2'>
                                     <?php echo $cli->getCidade(); ?>
                                 </div>
-                                <div class='inforeg3'>
+                                <div class='inforeg2'>
                                     <?php echo $cli->getTelefone(); ?>
                                 </div>
-                                <div class='inforeg3'>
-                                    <?php echo $cli->getBanco(); ?>
-                                </div>
-                                <div class='inforeg3'>
+                                <div class='inforeg2'>
                                     <?php echo $cli->getTipoConta(); ?>
                                 </div>
-                                <div class='inforeg3'>
+                                <div class='inforeg2'>
                                     <form id="apagar" name="apagar" method='POST'>
                                         <button type="submit" name="apagar-cliente" class='pagar' id='excluir'>
                                             <input type='hidden' name='opcao' value='<?php echo $cli->getIDcliente(); ?>'>
@@ -154,6 +165,7 @@ $controller->Excluir_Cliente();
                                         </button>
                                     </form>
                                 </div>
+                            </div>
                         </div>
                     </div>
                 <?php endforeach; ?>
