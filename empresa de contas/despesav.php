@@ -70,9 +70,7 @@ $contas = controller_conta::Get_contas("despesa_variavel");
 
 <body>
     <header>
-        <div class="titulo_header">
-        Rota Financeira <img src="logo.png" alt="" id="logo">
-        </div>
+        <img src="ROTA financeira.png" alt="">
     </header>
 
     <?php include_once('includes/extrato.php'); ?>
