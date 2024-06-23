@@ -9,14 +9,13 @@ body {
     background-color: #ebebeb;
 }
 
-/* HEADER DO SISTEMA */
 header {
     background-color: #269C72;
     height: 40px;
     padding: 2px 8px;
     display: flex;
-    justify-content: space-between; 
-    align-items: center; 
+    justify-content: space-between;
+    align-items: center;
 }
 
 #logo {
@@ -25,14 +24,39 @@ header {
 
 .sair {
     display: flex;
+    align-items: center;
 }
 
-button{
+.icones {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+}
+
+.icones .material-icons {
+    font-size: 25px;
+    color: #fff;
+    margin-right: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.sair button {
     background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px; 
 }
 
 .sair .material-icons {
     font-size: 25px;
     color: #fff;
-    margin-right: 10px;
+    margin-right: 5px; 
+    vertical-align: middle; 
+}
+
+.icones a .material-icons {
+    font-size: 25px;
+    margin-right: 5px; 
+    vertical-align: middle; 
 }

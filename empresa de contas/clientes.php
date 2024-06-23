@@ -86,11 +86,15 @@ $controller->Excluir_Cliente();
 <body>
     <header>
         <img src="ROTA financeira.png" alt="" id="logo">
-        <form action="index.php" method="post" class="sair">
-            <button type="submit">
-                <i class="material-icons">&#xe879;</i>
-            </button>
-        </form>
+        <div class="icones">
+            <a href="receitas.php"><i class="material-icons">&#xe88a;</i></a>
+            <a href="graficos.php"><i class="material-icons">&#xe01d;</i></a>
+            <form action="index.php" method="post" class="sair">
+                <button type="submit">
+                    <i class="material-icons">&#xe879;</i>
+                </button>
+            </form>
+        </div>
     </header>
 
     <?php include_once('includes/extrato.php'); ?>
